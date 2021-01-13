@@ -1,23 +1,23 @@
 const keyBox = document.getElementById("keyBox");
-const keyCodeBox = document.getElementById("keyCodeBox");
-const keyLocBox = document.getElementById("keyLocBox");
+const whichBox = document.getElementById("whichBox");
+const locBox = document.getElementById("locBox");
 const codeBox = document.getElementById("codeBox");
 const pageTitle = document.getElementById("pageTitle");
 const keyDesc = document.getElementById("keyDesc");
 
 document.onkeydown = function(e) {
-    console.log(e.keyCode + " = event.keyCode, " + e.key + " = event.key, " + e.location + " = event.location, "+ e.code + " = event.code");
+    console.log(e.which + " = event.which, " + e.key + " = event.key, " + e.location + " = event.location, "+ e.code + " = event.code");
     
-    keyCodeBox.innerHTML = e.keyCode;
+    whichBox.innerHTML = e.which;
     keyBox.innerHTML = e.key;
-    keyLocBox.innerHTML = e.location;
+    locBox.innerHTML = e.location;
     codeBox.innerHTML = e.code;
 
     keyDesc.innerHTML = e.key;
 
-    pageTitle.innerHTML = e.key + ' | ' + e.keyCode + ' | ' + e.code;
+    pageTitle.innerHTML = e.key + ' | ' + e.which + ' | ' + e.code;
 
-    if (e.keyCode === 32) {
+    if (e.which === 32) {
         keyDesc.innerHTML = "(Space Bar)";
     }
     return false;
