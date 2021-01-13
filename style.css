@@ -36,3 +36,7 @@ h3 {
   align-items: center;
   justify-content: center;
 }
+#keyDesc {
+  color: #AAAEBC;
+  font-size: 72px;
+}
