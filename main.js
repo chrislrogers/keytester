@@ -13,4 +13,6 @@ document.onkeydown = function(e) {
     codeBox.innerHTML = e.code;
     
     pageTitle.innerHTML = e.key + ' | ' + e.keyCode + ' | ' + e.code;
+    
+    return false;
 }
