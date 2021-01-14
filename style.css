@@ -2,9 +2,10 @@ body {
   font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
   background-color: #24292E;
   line-height: 1;
-  margin:30px auto;
   color: #FFFFFF;
   text-align: center;
+  padding-left: 25%;
+  padding-right: 25%;
 }
 h1 {
   color: #FFFFFF;
@@ -22,22 +23,18 @@ table {
   width: 70%;
   margin:30px auto;
 }
-
 td, th {
   border: 1px solid #444857;
   text-align: center;
   padding: 8px;
 }
-
 tr:nth-child(even) {
   background-color: #444857;
 }
 .container {
   margin: 20px auto;
-  width:800;
-  height:800;
-  display:inline-grid;
-  grid-template-columns: 400px 400px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 10px;
 }
 .box {
