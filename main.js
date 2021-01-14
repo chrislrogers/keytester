@@ -8,6 +8,7 @@ const shiftKeyBox = document.getElementById("shiftKeyBox");
 const altKeyBox = document.getElementById("altKeyBox");
 const ctrlKeyBox = document.getElementById("ctrlKeyBox");
 const metaKeyBox = document.getElementById("metaKeyBox");
+const repeatBox = document.getElementById("repeatBox");
 
 const pageTitle = document.getElementById("pageTitle");
 const keyDesc = document.getElementById("keyDesc");
@@ -26,6 +27,7 @@ document.onkeydown = function(e) {
     altKeyBox.innerHTML = e.altKey;
     ctrlKeyBox.innerHTML = e.ctrlKey;
     metaKeyBox.innerHTML = e.metaKey;
+    repeatBox.innerHTML = e.repeat;
 
     keyDesc.innerHTML = e.key;
 
