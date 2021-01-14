@@ -53,4 +53,5 @@ tr:nth-child(even) {
 }
 #more {
   display: none;
+  overflow-x:auto;
 }
