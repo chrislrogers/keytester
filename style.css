@@ -4,7 +4,7 @@ body {
   line-height: 1;
   color: #FFFFFF;
   text-align: center;
-  padding-left: 25%;
+ padding-left: 25%;
   padding-right: 25%;
 }
 h1 {
@@ -32,9 +32,8 @@ tr:nth-child(even) {
   background-color: #444857;
 }
 .container {
-  margin: 20px auto;
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
   grid-gap: 10px;
 }
 .box {
