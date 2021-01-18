@@ -1,5 +1,5 @@
 # JavaScript Key Tester
-A simple webpage that shows keydown events. The following is a list of events supported:
+A simple website that shows keydown and keyup events. The following is a list of events supported:
 
 * .key
 * .which
