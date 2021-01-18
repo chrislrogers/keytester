@@ -14,9 +14,26 @@ const pageTitle = document.getElementById("pageTitle");
 const keyDesc = document.getElementById("keyDesc");
 const moreButton = document.getElementById("moreButton");
 
-document.onkeydown = function(e) {
+document.onkeydown = function(event) {
+    if (document.querySelector('input[name="keyRadio"]:checked').value === "1") {
+        console.log("KEYDOWN");
+        test(event);
+    }
+    return false;
+}
+
+document.onkeyup = function(event) {
+    if (document.querySelector('input[name="keyRadio"]:checked').value === "2") {
+        console.log("KEYUP");
+        test(event);
+    }
+    return false;
+}
+
+function test(e) {
+
     console.log(e.which + " = event.which, " + e.key + " = event.key, " + e.location + " = event.location, "+ e.code + " = event.code");
-    
+	    
     whichBox.innerHTML = e.which;
     keyBox.innerHTML = e.key;
     locBox.innerHTML = e.location;
@@ -30,13 +47,11 @@ document.onkeydown = function(e) {
     repeatBox.innerHTML = e.repeat;
 
     keyDesc.innerHTML = e.key;
-
     pageTitle.innerHTML = e.key + ' | ' + e.which + ' | ' + e.code;
-
+    
     if (e.which === 32) {
         keyDesc.innerHTML = "(Space Bar)";
     }
-    return false;
 }
 
 function expand() {
