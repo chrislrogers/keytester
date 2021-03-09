@@ -14,7 +14,7 @@ const pageTitle = document.getElementById("pageTitle");
 const keyDesc = document.getElementById("keyDesc");
 const moreButton = document.getElementById("moreButton");
 
-document.onkeydown = function(event) {
+document.onkeydown = function (event) {
     if (document.querySelector('input[name="keyRadio"]:checked').value === "1") {
         console.log("KEYDOWN");
         test(event);
@@ -22,7 +22,7 @@ document.onkeydown = function(event) {
     return false;
 }
 
-document.onkeyup = function(event) {
+document.onkeyup = function (event) {
     if (document.querySelector('input[name="keyRadio"]:checked').value === "2") {
         console.log("KEYUP");
         test(event);
@@ -32,13 +32,13 @@ document.onkeyup = function(event) {
 
 function test(e) {
 
-    console.log(e.which + " = event.which, " + e.key + " = event.key, " + e.location + " = event.location, "+ e.code + " = event.code");
-	    
+    console.log(e.which + " = event.which, " + e.key + " = event.key, " + e.location + " = event.location, " + e.code + " = event.code");
+
     whichBox.innerHTML = e.which;
     keyBox.innerHTML = e.key;
     locBox.innerHTML = e.location;
     codeBox.innerHTML = e.code;
-    
+
     keyCodeBox.innerHTML = e.keyCode;
     shiftKeyBox.innerHTML = e.shiftKey;
     altKeyBox.innerHTML = e.altKey;
@@ -48,7 +48,7 @@ function test(e) {
 
     keyDesc.innerHTML = e.key;
     pageTitle.innerHTML = e.key + ' | ' + e.which + ' | ' + e.code;
-    
+
     if (e.which === 32) {
         keyDesc.innerHTML = "(Space Bar)";
     }
@@ -57,11 +57,11 @@ function test(e) {
 function expand() {
     content = document.getElementById("more");
     if (content.style.display === "block") {
-      content.style.display = "none";
-      moreButton.innerHTML = "Show More";
+        content.style.display = "none";
+        moreButton.innerHTML = "Show More";
     }
     else {
-      content.style.display = "block";
-      moreButton.innerHTML = "Show Less";
+        content.style.display = "block";
+        moreButton.innerHTML = "Show Less";
     }
 }

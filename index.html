@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="pageTitle">Key Tester</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <h1>JavaScript Key Tester</h1>
   <input type="radio" id="keyDown" name="keyRadio" value="1" checked>
@@ -14,25 +16,25 @@
   <label for="keyUp">keyup</label><br>
   <p id="keyDesc">...</p>
   <div class="container">
-  
+
     <div class="box">
-       <h3>event.key</h3>
-       <h2 class="key"id="keyBox">Press</h2>
+      <h3>event.key</h3>
+      <h2 class="key" id="keyBox">Press</h2>
     </div>
-    
+
     <div class="box">
-       <h3>event.which</h3>
-       <h2 class="key"id="whichBox">Key</h2>
+      <h3>event.which</h3>
+      <h2 class="key" id="whichBox">Key</h2>
     </div>
-    
+
     <div class="box">
-       <h3>event.location</h3>
-       <h2 class="key"id="locBox">To</h2>
+      <h3>event.location</h3>
+      <h2 class="key" id="locBox">To</h2>
     </div>
-    
+
     <div class="box">
-       <h3>event.code</h3>
-       <h2 class="key"id="codeBox">Test</h2>
+      <h3>event.code</h3>
+      <h2 class="key" id="codeBox">Test</h2>
     </div>
   </div>
   <div id="more">
@@ -59,4 +61,5 @@
   <button id="moreButton" onclick="expand()">Show More</button>
   <script src="main.js"></script>
 </body>
+
 </html>
